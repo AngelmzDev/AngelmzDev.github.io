@@ -71,7 +71,7 @@
     video.pause();
     maxTime = Math.max(0, video.duration - 1 / 24);
     slider.disabled = false;
-    requestFrame(maxTime * 0.2);
+    requestFrame(maxTime * 0.5);
   }
   video.addEventListener('loadedmetadata', initializeVideo);
   video.addEventListener('loadeddata', seekFrame);
@@ -96,7 +96,7 @@
     lastMouseX = event.clientX;
     if (previous === null || !interactionEnabled || document.hidden || scrollY > hero.offsetHeight) return;
     if (event.target.closest('.video-controls, .mobile-menu') || document.body.classList.contains('menu-open')) return;
-    requestFrame(targetTime + (event.clientX - previous) / innerWidth * 0.8 * video.duration);
+    requestFrame(targetTime - (event.clientX - previous) / innerWidth * 0.8 * video.duration);
   }, { passive: true });
   document.documentElement.addEventListener('pointerleave', () => { lastMouseX = null; });
   document.addEventListener('visibilitychange', () => { lastMouseX = null; });
@@ -117,7 +117,7 @@
       hero.setPointerCapture(event.pointerId);
     }
     if (touch.horizontal) {
-      requestFrame(targetTime + dx / innerWidth * 0.8 * video.duration);
+      requestFrame(targetTime - dx / innerWidth * 0.8 * video.duration);
       touch.x = event.clientX;
       touch.y = event.clientY;
     }
