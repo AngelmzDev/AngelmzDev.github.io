@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ángel Menendez - Portfolio de desarrollo de software</title>
+  <title>Ángel Menendez · Desarrollo de software</title>
   <meta name="description" content="Portfolio de Ángel Menendez: estudiante de DAM centrado en una formación sólida y en crear proyectos que aporten valor real a equipos y empresas.">
   <link rel="canonical" href="https://angelmzdev.github.io/">
-  <meta name="theme-color" content="#07070f">
+  <meta name="theme-color" content="#7c4849">
   <meta property="og:title" content="Ángel Menendez - Portfolio de desarrollo de software">
   <meta property="og:description" content="Estudiante de DAM centrado en una formación sólida y en proyectos que aporten valor real.">
   <meta property="og:type" content="website">
@@ -14,229 +14,75 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ángel Menendez - Portfolio de desarrollo de software">
   <meta name="twitter:description" content="Estudiante de DAM comprometido con una formación sólida, proyectos propios y mejora continua.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --bg:#07070f;--bg2:#0c0c1a;--bgc:rgba(255,255,255,.03);--bgh:rgba(255,255,255,.055);
-      --bd:rgba(255,255,255,.07);--bda:rgba(129,140,248,.28);
-      --t:#e2e8f0;--t2:#94a3b8;--t3:#475569;
-      --ac:#818cf8;--acd:rgba(129,140,248,.14);
-      --cy:#22d3ee;--cyd:rgba(34,211,238,.12);
-      --gr:#4ade80;--warn:#f59e0b;
-      --r:14px;--rl:20px;
-      --f:'Inter',system-ui,sans-serif;--m:'JetBrains Mono',Consolas,monospace;
-      --nh:68px;--sh:0 4px 28px rgba(0,0,0,.45);--gw:0 0 40px rgba(129,140,248,.09)
-    }
-    html{scroll-behavior:smooth;overflow-x:hidden}
-    body{font-family:var(--f);background:var(--bg);color:var(--t);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:3px}
-    :focus-visible{outline:2px solid var(--ac);outline-offset:3px;border-radius:4px}
-    a{color:inherit;text-decoration:none}
-
-    /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.25rem,5vw,4rem);border-bottom:1px solid transparent;transition:background .3s,border-color .3s,backdrop-filter .3s}
-    nav.sc{background:rgba(7,7,15,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:var(--bd)}
-    .nl{display:flex;align-items:center;gap:.5rem;font-family:var(--m);font-size:1rem;font-weight:500;color:var(--t)}
-    .nd{width:7px;height:7px;background:var(--ac);border-radius:50%;animation:pd 2.5s ease-in-out infinite}
-    @keyframes pd{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
-    .nv{display:flex;align-items:center;gap:clamp(1.25rem,3vw,2.25rem);list-style:none}
-    .nv a{font-size:.88rem;font-weight:500;color:var(--t2);transition:color .2s}
-    .nv a:hover{color:var(--t)}
-    .nc{padding:.5rem 1.2rem;min-height:44px;background:var(--acd);border:1px solid var(--bda);border-radius:8px;font-size:.85rem!important;font-weight:600!important;color:var(--ac)!important;display:inline-flex!important;align-items:center;transition:background .2s,border-color .2s!important}
-    .nc:hover{background:rgba(129,140,248,.25)!important;border-color:var(--ac)!important}
-
-    /* HERO */
-    .hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:3.5rem;padding:calc(var(--nh) + 4rem) clamp(1.25rem,5vw,4rem) 4rem;position:relative;overflow:hidden}
-    .hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 55% at 15% 55%,rgba(129,140,248,.07) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 85% 25%,rgba(34,211,238,.05) 0%,transparent 65%);transform:translateY(var(--py,0px));will-change:transform}
-    .hl{position:relative;z-index:1}
-    .badge{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .85rem;margin-bottom:1.5rem;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.22);border-radius:99px;font-size:.78rem;font-weight:600;color:var(--gr)}
-    .bd2{width:6px;height:6px;background:var(--gr);border-radius:50%;animation:pd 2s ease-in-out infinite}
-    h1{font-size:clamp(3.25rem,6.5vw,5.25rem);font-weight:900;letter-spacing:-.04em;line-height:1;margin-bottom:.9rem;background:linear-gradient(135deg,#e2e8f0 0%,#8892a4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .hs{font-family:var(--m);font-size:clamp(.85rem,1.6vw,1rem);color:var(--ac);margin-bottom:1.15rem;letter-spacing:-.01em}
-    .hd{font-size:clamp(.95rem,1.4vw,1.08rem);color:var(--t2);line-height:1.72;max-width:460px;margin-bottom:2.25rem}
-    .ha{display:flex;gap:.875rem;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:.45rem;padding:.72rem 1.6rem;border-radius:10px;border:none;font-size:.92rem;font-weight:600;cursor:pointer;transition:transform .15s,opacity .15s,box-shadow .18s;min-height:44px;text-decoration:none}
-    .btn:active{transform:scale(.97)}
-    .bp{background:var(--ac);color:#fff}.bp:hover{opacity:.9;box-shadow:0 4px 22px rgba(129,140,248,.32)}
-    .bo{background:var(--bgc);color:var(--t);border:1px solid var(--bd)}.bo:hover{background:var(--bgh);border-color:var(--bda)}
-
-    /* TERMINAL */
-    .hr{position:relative;z-index:1}
-    .term{background:#0d1117;border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;box-shadow:var(--sh),var(--gw)}
-    .th{display:flex;align-items:center;gap:.45rem;padding:.8rem 1.1rem;border-bottom:1px solid var(--bd);background:rgba(255,255,255,.02)}
-    .td2{width:12px;height:12px;border-radius:50%}
-    .td2:nth-child(1){background:#ff5f57}.td2:nth-child(2){background:#febc2e}.td2:nth-child(3){background:#28c840}
-    .tt{font-family:var(--m);font-size:.72rem;color:var(--t3);margin:0 auto}
-    .tb{padding:1.1rem 1.4rem;font-family:var(--m);font-size:.8rem;line-height:1.85;min-height:260px}
-    .tp{color:var(--ac)}.tc2{color:var(--t)}.tok{color:var(--gr)}.ti{color:var(--t2)}.tcm{color:#8b949e}
-    .cur{display:inline-block;width:7px;height:1em;background:var(--ac);vertical-align:text-bottom;border-radius:1px;animation:bl .9s step-end infinite}
-    @keyframes bl{0%,100%{opacity:1}50%{opacity:0}}
-
-    /* SECTIONS */
-    section{padding:5.5rem clamp(1.25rem,5vw,4rem)}
-    .sl{font-family:var(--m);font-size:.77rem;font-weight:500;color:var(--ac);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.9rem;display:flex;align-items:center;gap:.65rem}
-    .sl::before{content:'';width:5px;height:5px;background:var(--ac);border-radius:50%;flex-shrink:0;box-shadow:0 0 8px rgba(129,140,248,.8),0 0 16px rgba(129,140,248,.3)}
-    .sl::after{content:'';height:1px;flex:1;background:linear-gradient(90deg,var(--bda),transparent);max-width:160px}
-
-    /* SECTION DIVIDERS */
-    .sdiv{display:flex;align-items:center;padding:0 clamp(1.25rem,5vw,4rem);overflow:hidden}
-    .sdiv::before,.sdiv::after{content:'';flex:1;height:1px}
-    .sdiv::before{background:linear-gradient(to right,transparent,rgba(129,140,248,.2))}
-    .sdiv::after{background:linear-gradient(to left,transparent,rgba(129,140,248,.2))}
-    .sdiv-dot{width:4px;height:4px;background:var(--ac);border-radius:50%;flex-shrink:0;margin:0 .9rem;box-shadow:0 0 12px rgba(129,140,248,.7),0 0 24px rgba(129,140,248,.25)}
-    .st{font-size:clamp(1.85rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:1.1rem}
-    .sd{font-size:1.02rem;color:var(--t2);max-width:540px;line-height:1.72;margin-bottom:2.75rem}
-
-    /* BENTO */
-    .bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:.9rem;max-width:1160px;width:100%;margin:0 auto}
-    .bc{background:var(--bgc);border:1px solid var(--bd);border-radius:var(--rl);padding:1.65rem;transition:border-color .25s,background .25s,transform .25s,box-shadow .25s}
-    .bc:hover{border-color:var(--bda);background:var(--bgh);transform:translateY(-2px);box-shadow:var(--gw)}
-    .s7{grid-column:span 7}.s5{grid-column:span 5}.s8{grid-column:span 8}.s4{grid-column:span 4}
-    .btext{font-size:1.02rem;color:var(--t2);line-height:1.78}.btext strong{color:var(--t)}
-    .sg2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;height:100%}
-    .sn{font-size:2.1rem;font-weight:900;letter-spacing:-.04em;line-height:1;color:var(--t)}.sn span{color:var(--ac)}
-    .slb{font-size:.78rem;color:var(--t3);font-weight:500;margin-top:.2rem}
-    .ytl{font-family:var(--m);font-size:.72rem;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.6rem}
-    .ytc{font-size:1.2rem;font-weight:700;color:var(--t);margin-bottom:.5rem}
-    .ytd{font-size:.88rem;color:var(--t2);line-height:1.6;margin-bottom:1rem;flex:1}
-    .yta{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:600;color:#ff4444;transition:opacity .2s}.yta:hover{opacity:.8}.yta svg{width:17px;height:17px}
-    .nwl{font-family:var(--m);font-size:.72rem;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
-    .nwt{font-size:1.45rem;font-weight:800;letter-spacing:-.03em;color:var(--t)}.nwt span{color:var(--ac)}
-    .nws{font-family:var(--m);font-size:.78rem;color:var(--t3);margin-top:.4rem}
-    .gc{position:relative;overflow:hidden}.gc::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top right,var(--acd) 0%,transparent 60%);pointer-events:none}
-
-    /* FORMACION */
-    #stack{background:linear-gradient(to bottom,var(--bg) 0%,var(--bg2) 7%,var(--bg2) 93%,var(--bg) 100%)}
-    .learn{max-width:880px;background:var(--bgc);border:1px solid var(--bd);border-radius:var(--rl);padding:1.8rem;display:grid;gap:1rem}
-    .learn strong{color:var(--t)}
-    .learn p{font-size:1rem;color:var(--t2);line-height:1.75}
-    .learn-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin-top:.25rem}
-    .learn-item{padding:.85rem 1rem;border:1px solid var(--bd);border-radius:10px;background:rgba(255,255,255,.025);font-family:var(--m);font-size:.78rem;color:var(--t2)}
-
-    /* PROJECTS */
-    .pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1.1rem;max-width:1160px;width:100%;margin:0 auto}
-    .pj{background:var(--bgc);border:1px solid var(--bd);border-radius:var(--rl);padding:1.65rem;display:flex;flex-direction:column;gap:.9rem;transition:border-color .25s,background .25s,transform .25s,box-shadow .25s;position:relative;overflow:hidden}
-    .pj::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--acd),transparent);opacity:0;transition:opacity .25s}
-    .pj:hover{border-color:var(--bda);background:var(--bgh);transform:translateY(-3px);box-shadow:var(--sh),var(--gw)}.pj:hover::after{opacity:1}
-    .pimg{aspect-ratio:16/9;border:1px solid var(--bd);border-radius:14px;background:linear-gradient(135deg,rgba(129,140,248,.11),rgba(34,211,238,.06));display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
-    .pimg img{width:100%;height:100%;object-fit:cover;display:block}
-    .pimg::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(7,7,15,.36));pointer-events:none}
-    .phold{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:.45rem;color:var(--t2);font-family:var(--m);font-size:.75rem;text-align:center}
-    .phold span{width:34px;height:34px;border-radius:9px;border:1px solid var(--bda);background:var(--acd);display:flex;align-items:center;justify-content:center;color:var(--ac);font-weight:700}
-    .pn{font-family:var(--m);font-size:.72rem;color:var(--t3)}
-    .pt{font-size:1.2rem;font-weight:700;letter-spacing:-.02em;color:var(--t)}
-    .pd2{font-size:.9rem;color:var(--t2);line-height:1.68;flex:1}
-    .tags{display:flex;flex-wrap:wrap;gap:.38rem}
-    .tag{padding:.22rem .6rem;border-radius:6px;font-family:var(--m);font-size:.7rem;font-weight:500}
-    .ta{background:var(--acd);border:1px solid rgba(129,140,248,.15);color:var(--ac)}
-    .tc3{background:var(--cyd);border:1px solid rgba(34,211,238,.15);color:var(--cy)}
-    .tg{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.18);color:var(--gr)}
-    .tw{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.18);color:var(--warn)}
-    .pf{display:flex;gap:.65rem;padding-top:.5rem;border-top:1px solid var(--bd)}
-    .pl{display:inline-flex;align-items:center;gap:.38rem;font-size:.8rem;font-weight:600;color:var(--t2);transition:color .2s;min-height:44px}.pl:hover{color:var(--ac)}.pl svg{width:15px;height:15px;flex-shrink:0}
-
-    /* CONTACT */
-    #contact{background:linear-gradient(to bottom,var(--bg) 0%,var(--bg2) 8%,var(--bg2) 100%)}
-    .ci{max-width:660px}
-    .ce{display:inline-flex;align-items:center;gap:.7rem;font-size:clamp(1rem,2.2vw,1.3rem);font-weight:600;color:var(--t);padding:.95rem 1.4rem;min-height:44px;background:var(--bgc);border:1px solid var(--bd);border-radius:var(--r);transition:border-color .2s,background .2s;margin-bottom:1.85rem;max-width:100%;overflow-wrap:anywhere}
-    .ce:hover{border-color:var(--bda);background:var(--bgh)}.ce svg{color:var(--ac);flex-shrink:0}
-    .socs{display:flex;gap:.85rem;flex-wrap:wrap}
-    .soc{display:inline-flex;align-items:center;gap:.55rem;padding:.72rem 1.15rem;min-height:44px;background:var(--bgc);border:1px solid var(--bd);border-radius:10px;font-size:.88rem;font-weight:600;color:var(--t2);transition:color .2s,border-color .2s,background .2s,transform .15s}
-    .soc:hover{color:var(--t);border-color:var(--bda);background:var(--bgh);transform:translateY(-2px)}.soc svg{width:17px;height:17px;flex-shrink:0}
-
-    /* FOOTER */
-    footer{padding:1.75rem clamp(1.25rem,5vw,4rem);border-top:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
-    .ft{font-family:var(--m);font-size:.78rem;color:var(--t3)}
-
-    /* PROGRESS BAR */
-    #spb{position:fixed;top:0;left:0;height:3px;z-index:300;background:linear-gradient(90deg,var(--ac),var(--cy));width:0%;transition:width .08s linear;pointer-events:none}
-
-    /* REVEAL */
-    .rv{opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1)}
-    .rv.vs{opacity:1;transform:translateY(0)}
-    .rv-l{opacity:0;transform:translateX(-32px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
-    .rv-l.vs{opacity:1;transform:translateX(0)}
-    .rv-r{opacity:0;transform:translateX(32px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
-    .rv-r.vs{opacity:1;transform:translateX(0)}
-    .rv-s{opacity:0;transform:scale(.92);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
-    .rv-s.vs{opacity:1;transform:scale(1)}
-    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
-
-    /* RESPONSIVE */
-    @media(max-width:900px){
-      .hero{grid-template-columns:1fr;gap:2.5rem;text-align:center;padding-top:calc(var(--nh) + 2.5rem)}
-      .hd{margin:0 auto 2rem}.ha{justify-content:center}.badge{margin:0 auto 1.5rem}
-      .s7,.s5,.s8,.s4{grid-column:span 12}
-    }
-    @media(max-width:640px){
-      nav{padding:0 1.25rem}.nv{display:none}
-      section{padding:4.5rem 1rem}.hero{padding:calc(var(--nh) + 2.2rem) 1rem 3rem;min-height:auto}
-      h1{font-size:clamp(3rem,18vw,4.5rem)}
-      .ha{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:.75rem}.btn{justify-content:center;padding:.72rem .9rem}
-      .bento{grid-template-columns:1fr}.bc{padding:1.25rem}.sg2{gap:1rem}.sn{font-size:1.85rem}
-      .term{max-height:240px}.tb{min-height:175px;max-height:190px;overflow:hidden;padding:1rem;font-size:.72rem;line-height:1.7}
-      .learn{padding:1.25rem}.learn-list{grid-template-columns:1fr}.pg{grid-template-columns:1fr}.pj{padding:1.35rem}
-      .socs{display:grid;grid-template-columns:1fr 1fr}.soc{justify-content:center}.soc:last-child{grid-column:1/-1}
-      .rv-l,.rv-r{transform:translateY(24px)}.rv-l.vs,.rv-r.vs{transform:translateY(0)}
-    }
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
-  </style>
+  <link rel="stylesheet" href="assets/portfolio.css">
+  <script src="assets/portfolio.js" defer></script>
+  <meta property="og:image" content="https://angelmzdev.github.io/assets/video/hero-poster.jpg">
+  <link rel="preload" as="image" href="assets/video/hero-poster.jpg" fetchpriority="high">
 </head>
 <body>
-<div id="spb" aria-hidden="true"></div>
+<a class="skip-link" href="#projects">Saltar a los proyectos</a>
+<div class="video-stage" aria-hidden="true"><video id="hero-video" muted playsinline preload="auto" poster="assets/video/hero-poster.jpg" tabindex="-1" disablepictureinpicture><source src="assets/video/hero-scrub.mp4" type="video/mp4"></video><div class="video-shade"></div></div>
 
-<nav id="nav" aria-label="Navegación principal">
-  <a href="#" class="nl" aria-label="Ángel Menendez — inicio"><div class="nd" aria-hidden="true"></div>Ángel Menendez</a>
-  <ul class="nv" role="list">
-    <li><a href="#about">Sobre mí</a></li>
-    <li><a href="#stack">Formación</a></li>
-    <li><a href="#projects">Proyectos</a></li>
-    <li><a href="#contact" class="nc">Contacto</a></li>
-  </ul>
-</nav>
+<header class="site-header" id="site-header">
+  <a class="brand" href="#home" aria-label="AngelmzDev, inicio">AngelmzDev <span aria-hidden="true">✳︎</span></a>
+  <div class="desktop-nav" role="navigation" aria-label="Navegación principal"><a href="#projects">Proyectos</a><span aria-hidden="true">,</span> <a href="#about">Sobre mí</a><span aria-hidden="true">,</span> <a href="#stack">Formación</a></div>
+  <a class="header-contact" href="#contact">Hablemos</a>
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-labelledby="menu-title" hidden>
+  <h2 id="menu-title" class="sr-only">Navegación</h2>
+  <div role="navigation" aria-label="Navegación móvil"><a href="#projects">Proyectos</a><a href="#about">Sobre mí</a><a href="#stack">Formación</a><a href="#contact">Hablemos ↗</a></div>
+</div>
 
-<main>
-  <!-- HERO -->
-  <section class="hero" aria-label="Presentación">
-    <div class="hl">
-      <div class="badge" aria-label="Disponible para proyectos"><span class="bd2" aria-hidden="true"></span>Disponible para proyectos</div>
-      <h1>Ángel Menendez</h1>
-      <p class="hs">Desarrollo de software · Estudiante de DAM · Técnico SMR</p>
-      <p class="hd">Estudio Desarrollo de Aplicaciones Multiplataforma en CES Juan Pablo II. Combino mi base en sistemas y redes con el aprendizaje de Java y proyectos propios para crear herramientas útiles.</p>
-      <div class="ha">
-        <a href="#projects" class="btn bp">Ver proyectos <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="#contact" class="btn bo">Contactar</a>
-      </div>
+<main id="main">
+  <section class="hero" id="home" aria-label="Presentación de Ángel Menendez">
+  <div class="hero-content">
+    <p class="intro-label" aria-hidden="true">Hola, soy Ángel.<br>Ideas, código y aprendizaje continuo.</p>
+    <h1 class="hero-title"><span class="sr-only">Ángel Menendez. Aprendo, construyo y convierto ideas en software. ¿Qué creamos ahora?</span><span id="typewriter" aria-hidden="true">Aprendo, construyo y convierto ideas en software. ¿Qué creamos ahora?</span><span class="typing-cursor" id="typing-cursor" aria-hidden="true" hidden></span></h1>
+    <p class="hero-description">Estudiante de DAM en CES Juan Pablo II.<br>Una base en sistemas y redes. El foco en desarrollar.</p>
+    <div class="hero-actions" aria-label="Explorar mi portfolio">
+      <a class="pill" href="#projects">Descubre mis proyectos ↗</a><a class="pill" href="#about">Conóceme</a><a class="pill" href="#stack">Mi formación</a><a class="pill" href="https://github.com/AngelmzDev" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <div class="email-pill"><a href="mailto:amzzdev@proton.me">Hablemos: <span>amzzdev@proton.me</span></a><button type="button" id="copy-email" aria-label="Copiar correo amzzdev@proton.me" title="Copiar correo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4"/></svg></button></div>
     </div>
-    <div class="hr" aria-hidden="true">
-      <div class="term">
-        <div class="th"><span class="td2"></span><span class="td2"></span><span class="td2"></span><span class="tt">angel-menendez ~ terminal</span></div>
-        <div class="tb" id="tb"></div>
-      </div>
-    </div>
-  </section>
+    <p class="copy-status" id="copy-status" role="status"></p>
+  </div>
+  <div class="hero-bottom"><a class="scroll-cue" href="#projects"><span aria-hidden="true">↓</span> Sigue explorando</a>
+    <div class="video-controls" id="video-controls"><div class="video-controls-top"><label for="video-position" id="video-hint">Mueve el ratón para explorar ↔</label><button id="toggle-motion" type="button" aria-pressed="false" aria-label="Pausar interacción del vídeo" title="Pausar interacción"><span class="motion-icon" aria-hidden="true">Ⅱ</span></button></div><input id="video-position" type="range" min="0" max="1000" value="200" step="1" aria-label="Fotograma del vídeo" aria-valuetext="20 por ciento del vídeo" disabled><p id="video-status" class="sr-only" role="status"></p></div>
+  </div>
+</section>
 
   <div class="sdiv" aria-hidden="true"><span class="sdiv-dot"></span></div>
 
+  <!-- PROJECTS -->
+  <section id="projects" aria-labelledby="ph">
+    <p class="sl ">01 — proyectos</p>
+    <h2 class="st  " id="ph">Una idea.<br>Algo que <em>funciona.</em></h2>
+    <p class="sd  ">Herramientas, apuntes y laboratorios con repositorios públicos. Cada enlace permite consultar su alcance y documentación.</p>
+    <div class="pg" id="pg" role="list" aria-label="Proyectos">
+<article class="pj" role="listitem"><a class="project-image" href="https://github.com/AngelmzDev/CodeFlow-Studio" target="_blank" rel="noopener noreferrer" aria-label="Explorar CodeFlow Studio en GitHub"><img src="assets/projects/codeflow-studio.webp" alt="Miniatura ilustrada de CodeFlow Studio" width="1280" height="720" loading="lazy" decoding="async"><span class="image-arrow" aria-hidden="true">↗</span></a><div class="project-body"><span class="pn">01 / Proyecto personal</span><h3 class="pt">CodeFlow Studio</h3><p class="pd2">Herramienta local de código abierto para explorar programas Java y Python mediante código, diagramas y ejecución paso a paso. Proyecto personal con documentación y descarga para Windows.</p><div class="tags"><span class="tag">Java / Python</span><span class="tag">Herramienta educativa</span></div><div class="pf"><a class="pl" href="https://github.com/AngelmzDev/CodeFlow-Studio" target="_blank" rel="noopener noreferrer">Explorar el proyecto ↗</a></div></div></article>
+<article class="pj" role="listitem"><a class="project-image" href="https://github.com/AngelmzDev/Awtop" target="_blank" rel="noopener noreferrer" aria-label="Explorar Awtop en GitHub"><img src="assets/projects/awtop.webp" alt="Miniatura ilustrada de Awtop" width="1280" height="720" loading="lazy" decoding="async"><span class="image-arrow" aria-hidden="true">↗</span></a><div class="project-body"><span class="pn">02 / Proyecto personal</span><h3 class="pt">Awtop</h3><p class="pd2">Utilidad para Windows que permite elegir una ventana, mantenerla por encima de las demás y retirar su prioridad. Incluye código e instrucciones de uso y compilación.</p><div class="tags"><span class="tag">C# / .NET</span><span class="tag">Windows</span></div><div class="pf"><a class="pl" href="https://github.com/AngelmzDev/Awtop" target="_blank" rel="noopener noreferrer">Explorar el proyecto ↗</a></div></div></article>
+<article class="pj" role="listitem"><a class="project-image" href="https://github.com/AngelmzDev/Java-Mastery-Notes" target="_blank" rel="noopener noreferrer" aria-label="Explorar Java-Mastery-Notes en GitHub"><img src="assets/projects/java-mastery-notes.webp" alt="Miniatura ilustrada de Java-Mastery-Notes" width="1280" height="720" loading="lazy" decoding="async"><span class="image-arrow" aria-hidden="true">↗</span></a><div class="project-body"><span class="pn">03 / Proyecto personal</span><h3 class="pt">Java-Mastery-Notes</h3><p class="pd2">Mi recorrido por Java básico hasta arrays: apuntes organizados por conceptos, trazas, ejercicios de práctica y soluciones explicadas para comprender cada paso.</p><div class="tags"><span class="tag">Java</span><span class="tag">Apuntes</span></div><div class="pf"><a class="pl" href="https://github.com/AngelmzDev/Java-Mastery-Notes" target="_blank" rel="noopener noreferrer">Explorar el proyecto ↗</a></div></div></article>
+<article class="pj" role="listitem"><a class="project-image" href="https://github.com/AngelmzDev/instagram-auto-publisher" target="_blank" rel="noopener noreferrer" aria-label="Explorar instagram-auto-publisher en GitHub"><img src="assets/projects/instagram-auto-publisher.webp" alt="Miniatura ilustrada de instagram-auto-publisher" width="1280" height="720" loading="lazy" decoding="async"><span class="image-arrow" aria-hidden="true">↗</span></a><div class="project-body"><span class="pn">04 / Proyecto personal</span><h3 class="pt">instagram-auto-publisher</h3><p class="pd2">Guía paso a paso y prompts para construir con apoyo de IA un publicador de carruseles en Python mediante la API oficial de Instagram. Recurso de documentación.</p><div class="tags"><span class="tag">Guía</span><span class="tag">Automatización</span></div><div class="pf"><a class="pl" href="https://github.com/AngelmzDev/instagram-auto-publisher" target="_blank" rel="noopener noreferrer">Explorar el proyecto ↗</a></div></div></article>
+<article class="pj" role="listitem"><a class="project-image" href="https://github.com/AngelmzDev/Wazuh-SOC-lab" target="_blank" rel="noopener noreferrer" aria-label="Explorar Wazuh-SOC-lab en GitHub"><img src="assets/projects/wazuh-soc-lab.webp" alt="Miniatura ilustrada de Wazuh-SOC-lab" width="1280" height="720" loading="lazy" decoding="async"><span class="image-arrow" aria-hidden="true">↗</span></a><div class="project-body"><span class="pn">05 / Proyecto personal</span><h3 class="pt">Wazuh-SOC-lab</h3><p class="pd2">Laboratorio documentado de Wazuh All-in-One sobre Ubuntu Server. Incluye instalación, configuración y una utilidad para restablecer la contraseña del administrador.</p><div class="tags"><span class="tag">Linux / Wazuh</span><span class="tag">Laboratorio</span></div><div class="pf"><a class="pl" href="https://github.com/AngelmzDev/Wazuh-SOC-lab" target="_blank" rel="noopener noreferrer">Explorar el proyecto ↗</a></div></div></article>
+</div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about" aria-label="Sobre mí">
-    <p class="sl rv-l">01 — sobre mí</p>
+    <p class="sl ">02 — sobre mí</p>
     <div class="bento" role="list">
-      <article class="bc s7 rv-l" role="listitem">
-        <p class="btext">Soy <strong>Ángel Menendez</strong>, técnico en <strong>Sistemas Microinformáticos y Redes (SMR), formado en IES Ignacio Ellacuría</strong>, y estudiante de <strong>DAM en CES Juan Pablo II</strong>, en Madrid. Mi experiencia de prácticas en sistemas y redes es la base desde la que me oriento al desarrollo de software.<br><br>Practico Java, documento lo que aprendo y construyo proyectos personales con IA como apoyo. Estos proyectos muestran mi aprendizaje y no equivalen a experiencia profesional como desarrollador.</p>
+      <article class="bc s7 " role="listitem">
+        <p class="btext">Soy <strong>Ángel Menendez</strong>, técnico en <strong>Sistemas Microinformáticos y Redes (SMR), formado en IES Ignacio Ellacuría</strong>, y estudiante de <strong>DAM en CES Juan Pablo II</strong>, en Madrid. Mi experiencia de prácticas en sistemas y redes es la base desde la que me oriento al desarrollo de software.<br><br>Practico Java, documento lo que aprendo y construyo proyectos personales con IA como apoyo. Son proyectos personales con los que aprendo construyendo. Mi experiencia profesional corresponde a sistemas y otras responsabilidades; el desarrollo lo construyo mediante formación y proyectos propios.</p>
       </article>
-      <article class="bc s5 rv-r d1" role="listitem">
+      <article class="bc s5  " role="listitem">
         <div class="sg2">
           <div><div class="sn" data-count="5" data-suffix="">5</div><div class="slb">Proyectos destacados</div></div>
           <div><div class="sn">DAM</div><div class="slb">En curso</div></div>
           <div><div class="sn" data-count="1" data-suffix="">1</div><div class="slb">Canal YouTube</div></div>
-          <div><div class="sn">∞</div><div class="slb">Ganas de aprender</div></div>
+          <div><div class="sn">SMR</div><div class="slb">Título obtenido</div></div>
         </div>
       </article>
-      <article class="bc s4 rv-s d2" role="listitem" style="display:flex;flex-direction:column">
+      <article class="bc s4  " role="listitem" style="display:flex;flex-direction:column">
         <p class="ytl">YouTube</p>
         <p class="ytc">Café y Bytes</p>
         <p class="ytd">Tecnología, automatización y programación explicadas sin rodeos.</p>
@@ -245,17 +91,17 @@
           Ver canal
         </a>
       </article>
-      <article class="bc s8 gc rv-r d3" role="listitem">
+      <article class="bc s8 gc  " role="listitem">
         <p class="nwl">Enfoque actual</p>
         <p class="nwt">Formarme para <span>aportar valor</span></p>
         <p class="nws">Java como foco práctico: lógica, fundamentos y programación orientada a objetos. Mi objetivo es consolidar una base de desarrollo sobre mis conocimientos de sistemas y redes.</p>
       </article>
-      <article class="bc s7 rv-l" role="listitem">
+      <article class="bc s7 " role="listitem">
         <p class="nwl">Experiencia técnica · prácticas</p>
         <h2 class="ytc">Sistemas y redes · Grupo Educativo</h2>
         <p class="btext">Administración de redes Ubiquiti: instalación y configuración de switches, VLAN y reglas de firewall; análisis de DNS, DHCP, routing y latencia para resolver incidencias.<br><br>Gestión de usuarios y contraseñas en Windows y Linux, aplicación y ajuste de GPO para aulas y equipos docentes, y soporte de hardware y software.</p>
       </article>
-      <article class="bc s5 rv-r d1" role="listitem">
+      <article class="bc s5  " role="listitem">
         <p class="nwl">Otras responsabilidades</p>
         <p class="ytd"><strong>Sampere Procuradores · Administrativo · 2 años.</strong> Digitalización documental, presentación de demandas y comunicación con clientes.</p>
         <p class="ytd"><strong>Konecta BTO, Lisboa · Ventas y coordinación · 3 meses.</strong> Coordinación de 10 personas y seguimiento de objetivos individuales y de equipo.</p>
@@ -269,9 +115,9 @@
 
   <!-- FORMACION -->
   <section id="stack" aria-labelledby="sh">
-    <p class="sl rv-l">02 — formación</p>
-    <h2 class="st rv-l d1" id="sh">Formación y competencias</h2>
-    <div class="learn rv d2" role="note" aria-label="Tecnologías en formación">
+    <p class="sl ">03 — formación</p>
+    <h2 class="st  " id="sh">Una base sólida.<br>Un camino <em>abierto.</em></h2>
+    <div class="learn  " role="note" aria-label="Tecnologías en formación">
       <p><strong>DAM en curso · CES Juan Pablo II.</strong> Formación previa: título de Técnico en Sistemas Microinformáticos y Redes (SMR).</p>
       <p>Java es mi foco práctico actual. SQL y HTML/CSS forman parte de mi aprendizaje; utilizo Git/GitHub para organizar y compartir proyectos. Los niveles varían y sigo consolidando autonomía. Uso IA como apoyo para explorar soluciones y documentar, revisando los resultados.</p>
       <div class="learn-list" aria-label="Estado actual">
@@ -290,27 +136,21 @@
 
   <div class="sdiv" aria-hidden="true"><span class="sdiv-dot"></span></div>
 
-  <!-- PROJECTS -->
-  <section id="projects" aria-labelledby="ph">
-    <p class="sl rv-l">03 — proyectos</p>
-    <h2 class="st rv-l d1" id="ph">Proyectos y recursos</h2>
-    <p class="sd rv d2">Herramientas, apuntes y laboratorios con repositorios públicos. Cada enlace permite consultar su alcance y documentación.</p>
-    <div class="pg" id="pg" role="list" aria-label="Proyectos"></div>
-  </section>
+
 
   <div class="sdiv" aria-hidden="true"><span class="sdiv-dot"></span></div>
 
   <!-- CONTACT -->
   <section id="contact" aria-labelledby="ch">
     <div class="ci">
-      <p class="sl rv-l">04 — contacto</p>
-      <h2 class="st rv-l d1" id="ch">Hablemos</h2>
-      <p class="sd rv d2">Si quieres hablar de mis proyectos o de oportunidades para seguir creciendo en desarrollo de software, escríbeme.</p>
-      <a href="mailto:amzzdev@proton.me" class="ce rv d3" aria-label="Enviar email a amzzdev@proton.me">
+      <p class="sl ">04 — contacto</p>
+      <h2 class="st  " id="ch">¿Qué creamos<br><em>ahora?</em> ↗</h2>
+      <p class="sd  ">Si quieres hablar de mis proyectos o de oportunidades para seguir creciendo en desarrollo de software, escríbeme.</p>
+      <a href="mailto:amzzdev@proton.me" class="ce  " aria-label="Enviar email a amzzdev@proton.me">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         amzzdev@proton.me
       </a>
-      <div class="socs rv d1">
+      <div class="socs  ">
         <a href="https://github.com/AngelmzDev" target="_blank" rel="noopener noreferrer" class="soc" aria-label="GitHub de AngelmzDev">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>GitHub
         </a>
@@ -328,179 +168,12 @@
   </section>
 </main>
 
-<footer>
+<footer id="footer">
   <p class="ft">© 2026 Ángel Menendez</p>
-  <p class="ft">Proyectos propios · aprendizaje continuo</p>
+  <p class="ft"><a href="version-anterior/">Portfolio anterior ↗</a></p>
 </footer>
 
-<script>
-  // NAV scroll + PROGRESS BAR + PARALLAX
-  const nav=document.getElementById('nav');
-  const spb=document.getElementById('spb');
-  const hero=document.querySelector('.hero');
-  window.addEventListener('scroll',()=>{
-    nav.classList.toggle('sc',scrollY>40);
-    const pct=scrollY/(document.body.scrollHeight-innerHeight)*100;
-    spb.style.width=Math.min(pct,100)+'%';
-    hero.style.setProperty('--py',(scrollY*.28)+'px');
-  },{passive:true});
 
-  // TERMINAL
-  const ls=[
-    '<span class="tp">❯</span> <span class="tc2">whoami</span>',
-    '<span class="tc2">  Ángel Menendez</span>',
-    '',
-    '<span class="tp">❯</span> <span class="tc2">cat ~/.profile</span>',
-    '<span class="ti">  nombre    Ángel Menendez</span>',
-    '<span class="ti">  rol       Estudiante de DAM · Técnico SMR</span>',
-    '<span class="ti">  foco      Java · desarrollo de software</span>',
-    '<span class="ti">  base      España</span>',
-    '<span class="ti">  email     amzzdev@proton.me</span>',
-    '<span class="ti">  github    github.com/AngelmzDev</span>',
-    '<span class="tok">  ok        portfolio cargado</span>',
-    '',
-    '<span class="tp">❯</span> <span class="tc2">ls proyectos/</span>',
-    '<span class="tc2">  CodeFlow-Studio/  Awtop/  Java-Mastery-Notes/<br>  instagram-auto-publisher/  Wazuh-SOC-lab/</span>',
-    '',
-    '<span class="tp">❯</span> <span class="tcm"># aprendiendo · construyendo · mejorando</span>'
-  ];
-  const tb=document.getElementById('tb');let li=0;
-  function nL(){
-    if(li>=ls.length){const c=document.createElement('span');c.className='cur';tb.appendChild(c);return;}
-    const d=document.createElement('div');tb.appendChild(d);
-    if(!ls[li]){li++;setTimeout(nL,70);return;}
-    d.innerHTML=ls[li];li++;setTimeout(nL,li<5?190:210);
-  }
-  setTimeout(nL,700);
-
-  // REVEAL
-  const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vs');obs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -36px 0px'});
-  document.querySelectorAll('.rv,.rv-l,.rv-r,.rv-s').forEach(el=>obs.observe(el));
-
-  // COUNTERS
-  function runCounter(el){
-    const target=+el.dataset.count;
-    const suffix=el.dataset.suffix||'';
-    const dur=1200;let s=null;
-    const tick=ts=>{
-      if(!s)s=ts;
-      const p=Math.min((ts-s)/dur,1);
-      const ease=1-Math.pow(1-p,3);
-      const val=Math.round(ease*target);
-      el.innerHTML=suffix?val+'<span>'+suffix+'</span>':val;
-      if(p<1)requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }
-  const cObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.sn[data-count]').forEach(runCounter);cObs.unobserve(e.target);}});},{threshold:.4});
-  const statsCard=document.querySelector('.bc.s5');
-  if(statsCard)cObs.observe(statsCard);
-
-  // PROJECTS
-  const pjs=[
-  {
-    "num": "01",
-    "title": "CodeFlow-Studio",
-    "desc": "Herramienta local de código abierto para explorar programas Java y Python mediante código, diagramas y ejecución paso a paso. Proyecto personal con documentación y descarga para Windows.",
-    "tags": [
-      {
-        "l": "Java / Python",
-        "c": "ta"
-      },
-      {
-        "l": "Herramienta educativa",
-        "c": "tc3"
-      }
-    ],
-    "href": "https://github.com/AngelmzDev/CodeFlow-Studio",
-    "linkText": "Ver repositorio",
-    "img": "assets/projects/codeflow-studio.webp"
-  },
-  {
-    "num": "02",
-    "title": "Awtop",
-    "desc": "Utilidad para Windows que permite elegir una ventana, mantenerla por encima de las demás y retirar su prioridad. Incluye código e instrucciones de uso y compilación.",
-    "tags": [
-      {
-        "l": "C# / .NET",
-        "c": "ta"
-      },
-      {
-        "l": "Windows",
-        "c": "tc3"
-      }
-    ],
-    "href": "https://github.com/AngelmzDev/Awtop",
-    "linkText": "Ver repositorio",
-    "img": "assets/projects/awtop.webp"
-  },
-  {
-    "num": "03",
-    "title": "Java-Mastery-Notes",
-    "desc": "Repositorio personal de aprendizaje de Java: apuntes, esquemas y ejercicios para consolidar lógica y programación orientada a objetos. Material en evolución, no una acreditación de nivel avanzado.",
-    "tags": [
-      {
-        "l": "Java",
-        "c": "ta"
-      },
-      {
-        "l": "Apuntes",
-        "c": "tc3"
-      }
-    ],
-    "href": "https://github.com/AngelmzDev/Java-Mastery-Notes",
-    "linkText": "Ver repositorio",
-    "img": "assets/projects/java-mastery-notes.webp"
-  },
-  {
-    "num": "04",
-    "title": "instagram-auto-publisher",
-    "desc": "Guía paso a paso y prompts para construir con apoyo de IA un publicador de carruseles en Python mediante la API oficial de Instagram. Recurso de documentación, no un servicio en producción.",
-    "tags": [
-      {
-        "l": "Guía",
-        "c": "ta"
-      },
-      {
-        "l": "Automatización",
-        "c": "tc3"
-      }
-    ],
-    "href": "https://github.com/AngelmzDev/instagram-auto-publisher",
-    "linkText": "Ver repositorio",
-    "img": "assets/projects/instagram-auto-publisher.webp"
-  },
-  {
-    "num": "05",
-    "title": "Wazuh-SOC-lab",
-    "desc": "Laboratorio documentado de Wazuh All-in-One sobre Ubuntu Server. Incluye instalación, configuración y una utilidad para restablecer la contraseña del administrador.",
-    "tags": [
-      {
-        "l": "Linux / Wazuh",
-        "c": "ta"
-      },
-      {
-        "l": "Laboratorio",
-        "c": "tc3"
-      }
-    ],
-    "href": "https://github.com/AngelmzDev/Wazuh-SOC-lab",
-    "linkText": "Ver repositorio",
-    "img": "assets/projects/wazuh-soc-lab.webp"
-  }
-];
-  const pg=document.getElementById('pg');
-  const linkI=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>`;
-  pjs.forEach((p,i)=>{
-    const el=document.createElement('article');
-    el.className='pj rv'+(i===1?' d1':i===2?' d2':i===3?' d3':'');
-    el.setAttribute('role','listitem');
-    const media=p.img?`<div class="pimg"><img src="${p.img}" alt="Miniatura ilustrada de ${p.title}" loading="lazy" decoding="async" width="1280" height="720"></div>`:`<div class="pimg" aria-label="Recurso: ${p.title}"><div class="phold"><span>${p.num}</span>${p.title}</div></div>`;
-    const footer=p.href?`<div class="pf"><a href="${p.href}" target="_blank" rel="noopener noreferrer" class="pl" aria-label="${p.linkText||'Ver proyecto'}: ${p.title}">${linkI} ${p.linkText||'Ver proyecto'}</a></div>`:`<div class="pf"><span class="pl" aria-label="Proyecto pendiente de enlace">${linkI} Imagen y enlace pendientes</span></div>`;
-    el.innerHTML=`${media}<span class="pn">${p.num}</span><h3 class="pt">${p.title}</h3><p class="pd2">${p.desc}</p><div class="tags">${p.tags.map(t=>`<span class="tag ${t.c}">${t.l}</span>`).join('')}</div>${footer}`;
-    pg.appendChild(el);
-    obs.observe(el);
-  });
-</script>
+<noscript><p class="noscript-note">El contenido y los enlaces funcionan sin JavaScript. Actívalo para controlar el vídeo y abrir el menú interactivo.</p></noscript>
 </body>
 </html>
