@@ -414,7 +414,7 @@
     ],
     "href": "https://github.com/AngelmzDev/CodeFlow-Studio",
     "linkText": "Ver repositorio",
-    "img": "https://raw.githubusercontent.com/AngelmzDev/CodeFlow-Studio/main/docs/images/codeflow-cover.png"
+    "img": "assets/projects/codeflow-studio.webp"
   },
   {
     "num": "02",
@@ -432,7 +432,7 @@
     ],
     "href": "https://github.com/AngelmzDev/Awtop",
     "linkText": "Ver repositorio",
-    "img": "https://raw.githubusercontent.com/AngelmzDev/Awtop/main/awtop-hero.png"
+    "img": "assets/projects/awtop.webp"
   },
   {
     "num": "03",
@@ -449,7 +449,8 @@
       }
     ],
     "href": "https://github.com/AngelmzDev/Java-Mastery-Notes",
-    "linkText": "Ver repositorio"
+    "linkText": "Ver repositorio",
+    "img": "assets/projects/java-mastery-notes.webp"
   },
   {
     "num": "04",
@@ -466,7 +467,8 @@
       }
     ],
     "href": "https://github.com/AngelmzDev/instagram-auto-publisher",
-    "linkText": "Ver repositorio"
+    "linkText": "Ver repositorio",
+    "img": "assets/projects/instagram-auto-publisher.webp"
   },
   {
     "num": "05",
@@ -483,7 +485,8 @@
       }
     ],
     "href": "https://github.com/AngelmzDev/Wazuh-SOC-lab",
-    "linkText": "Ver repositorio"
+    "linkText": "Ver repositorio",
+    "img": "assets/projects/wazuh-soc-lab.webp"
   }
 ];
   const pg=document.getElementById('pg');
@@ -492,7 +495,7 @@
     const el=document.createElement('article');
     el.className='pj rv'+(i===1?' d1':i===2?' d2':i===3?' d3':'');
     el.setAttribute('role','listitem');
-    const media=p.img?`<div class="pimg"><img src="${p.img}" alt="Imagen de ${p.title}"></div>`:`<div class="pimg" aria-label="Recurso: ${p.title}"><div class="phold"><span>${p.num}</span>${p.title}</div></div>`;
+    const media=p.img?`<div class="pimg"><img src="${p.img}" alt="Miniatura ilustrada de ${p.title}" loading="lazy" decoding="async" width="1280" height="720"></div>`:`<div class="pimg" aria-label="Recurso: ${p.title}"><div class="phold"><span>${p.num}</span>${p.title}</div></div>`;
     const footer=p.href?`<div class="pf"><a href="${p.href}" target="_blank" rel="noopener noreferrer" class="pl" aria-label="${p.linkText||'Ver proyecto'}: ${p.title}">${linkI} ${p.linkText||'Ver proyecto'}</a></div>`:`<div class="pf"><span class="pl" aria-label="Proyecto pendiente de enlace">${linkI} Imagen y enlace pendientes</span></div>`;
     el.innerHTML=`${media}<span class="pn">${p.num}</span><h3 class="pt">${p.title}</h3><p class="pd2">${p.desc}</p><div class="tags">${p.tags.map(t=>`<span class="tag ${t.c}">${t.l}</span>`).join('')}</div>${footer}`;
     pg.appendChild(el);
