@@ -2,13 +2,13 @@
 
 Web oficial: [angelmzdev.github.io](https://angelmzdev.github.io/).
 
-## Diseño con vídeo interactivo
+## Personaje que sigue al cursor
 
-El vídeo de presentación permanece pausado: el movimiento horizontal del ratón avanza o retrocede por su línea de tiempo. Se conserva un único salto de vídeo en curso para evitar saturar el decodificador. En pantallas táctiles puede arrastrarse horizontalmente; el desplazamiento vertical sigue navegando por la página.
+El personaje de la portada mira hacia donde está el ratón (o el dedo, arrastrando en horizontal en pantallas táctiles; el desplazamiento vertical sigue navegando por la página). La dirección se calcula respecto a la posición real de su cabeza en pantalla, con un muelle amortiguado para que el giro sea suave y un ligero parallax de fondo. Si el cursor sale de la ventana, vuelve a mirar al frente.
 
-La barra de posición también permite controlar el fotograma por teclado. El botón de pausa desactiva el seguimiento del puntero. La preferencia de reducir movimiento lo desactiva inicialmente, pero permite activarlo de forma explícita o explorar con la barra. No hay reproducción automática ni audio.
+Las poses están en `assets/gaze/` (11 WebP, ~320 KB) y se pintan en un `<canvas>` con un fundido corto entre poses vecinas. Se extraen del vídeo original `assets/video/hero-scrub.mp4` con `sh scripts/build-gaze-frames.sh` (requiere ffmpeg), ordenadas de izquierda a derecha y sin parpadeos. Si se cambia el vídeo, hay que ajustar la lista de fotogramas del script y los ángulos de `GAZE_POSES` en `assets/portfolio.js`.
 
-El archivo `assets/video/hero-scrub.mp4` procede del vídeo facilitado por el propietario. Se ha preparado en H.264 con fotogramas clave frecuentes, sin audio y con metadatos al inicio para facilitar la carga y la búsqueda. `hero-poster.jpg` ofrece una imagen mientras carga o si el vídeo no puede reproducirse.
+La barra permite controlar la mirada por teclado. El botón de pausa desactiva el seguimiento del puntero. La preferencia de reducir movimiento lo desactiva inicialmente (y siempre quita el parallax). `hero-poster.jpg` se muestra mientras cargan las poses o si fallan.
 
 La web usa HTML, CSS y JavaScript sin un paso de compilación ni dependencias de ejecución externas. Los proyectos y el resto del contenido están presentes en HTML, incluidos sin JavaScript. Las miniaturas son ilustraciones de proyecto.
 
@@ -20,7 +20,7 @@ También se puede consultar la [versión anterior publicada](https://angelmzdev.
 
 ## Desarrollo local
 
-El servidor de vista previa admite rangos de bytes, necesarios para comprobar los saltos interactivos del vídeo igual que en GitHub Pages. Con Node.js instalado, desde la raíz:
+Con Node.js instalado, desde la raíz:
 
 ```shell
 node scripts/serve.cjs
